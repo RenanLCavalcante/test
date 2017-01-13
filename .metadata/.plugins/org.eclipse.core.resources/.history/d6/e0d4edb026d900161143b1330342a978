@@ -1,0 +1,61 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Teste Dev Java</title>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/post.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<h1>Cadastro de Usuário</h1>
+		<div id="divMain">
+			<form id="formulario_cadastro">
+				<div class="form-group">
+					<label for="nome">Nome</label> <input type="text"
+						class="form-control" id="nome">
+				</div>
+				<div class="checkbox">
+					<label> <input type="checkbox" value="1" name="ativo" id="ativo">Ativo
+					</label>
+				</div>
+
+				<div class="form-group">
+					<label for="departamento">Departamento</label> <select
+						name="departamento" class="form-control" id="departamento">
+						<option value="adm">Administrativo</option>
+						<option value="tecnico">Técnico</option>
+						<option value="consultoria">Consultoria</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="sexo">Sexo</label> 
+					<div class="radio"> 
+					<label>
+							<input type="radio" name="sexo" id="sexo" value="M">Masculino
+					</label>
+					</div>
+					<div class="radio">
+						<label><input type="radio" name="sexo" id="sexo" value="F">Feminino</label>
+					</div>
+				</div>
+				<input type="button" value="Add Usuário" id="cadastrar" class="btn btn-info">
+			</form>
+		</div>
+	</div>
+
+	<div id="divDestino"></div>
+
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+</body>
+</html>

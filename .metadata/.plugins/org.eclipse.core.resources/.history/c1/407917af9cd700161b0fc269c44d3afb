@@ -1,0 +1,39 @@
+function doAjaxPost() {
+11
+        // get the form values
+12
+        var name = $('#name').val();
+13
+        var education = $('#education').val();
+14
+ 
+15
+        $.ajax({
+16
+        type: "POST",
+17
+        url: "/AjaxWithSpringMVC2Annotations/AddUser.htm",
+18
+        data: "name=" + name + "&education=" + education,
+19
+        success: function(response){
+20
+        // we have the response
+21
+        $('#info').html(response);
+22
+        $('#name').val('');
+23
+        $('#education').val('');
+24
+        },
+25
+        error: function(e){
+26
+        alert('Error: ' + e);
+27
+        }
+28
+        });
+29
+        }

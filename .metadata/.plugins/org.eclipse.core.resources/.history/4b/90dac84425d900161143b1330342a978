@@ -1,0 +1,16 @@
+function doAjaxPost() {
+	var nome = $('#nome').val();
+	
+	$.ajax({
+		type : "POST",
+		url : "/cadastrar",
+		data : "nome=",
+		success : function(response) {
+			// we have the response
+			$('#nome').val('');
+		},
+		error : function(e) {
+			alert('Error: ' + e);
+		}
+	});
+}

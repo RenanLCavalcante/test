@@ -1,0 +1,21 @@
+function doAjaxPost() {
+	var nome = $('#nome').val();
+	var ativo = $('#ativo').val();
+	var departamento = $('#departamento').val();
+	var sexo = $('#sexo').val();
+	
+	$.ajax({
+		type : "POST",
+		url : "/cadastrar",
+		data : "nome=" + nome + "&ativo=" + ativo + "&departamento=" + departamento + "&sexo=" + sexo,
+		success : function(response) {
+			// we have the response
+			$('#info').html(response);
+			$('#name').val('');
+			$('#education').val('');
+		},
+		error : function(e) {
+			alert('Error: ' + e);
+		}
+	});
+}

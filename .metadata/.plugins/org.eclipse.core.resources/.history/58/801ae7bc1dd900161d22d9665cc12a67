@@ -1,0 +1,20 @@
+package test.serviceImpl;
+
+import javax.inject.Inject;
+
+import test.model.User;
+import test.repositoryImpl.UserRepository;
+import test.service.IUserService;
+
+public class UserServiceImpl implements IUserService {
+	
+	@Inject
+	private UserRepository ur;
+	
+	@Override
+	public boolean create(User user) {
+		ur.create(user);
+		return true;
+	}
+
+}

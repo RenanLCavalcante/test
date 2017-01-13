@@ -1,0 +1,5 @@
+package test.serviceImpl;
+
+public class UserServiceImpl {
+
+}

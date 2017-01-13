@@ -1,0 +1,20 @@
+$(document).ready(function(){
+                $("#cadastrar").click(function(){
+                        //alert("ola");
+                        $.ajax({
+                                url: '<?= base_url(); ?>' + 'test/cadatrar',
+                                type: 'POST',
+                                data: $("#formulario_cadastro").serialize(),
+                                success: function(msg){
+                                    $("#mensagem").html(msg);
+                                    if(msg == 'Cadastrado com sucesso!!'){
+                                        jQuery.fn.reset = function(){
+                                                $(this).each(function(){ this.reset();});
+                                            }
+                                        $("#formulario_cadastro").reset();
+                                    }
+                                    }
+                            });
+                        return false;
+                    });
+            });     
